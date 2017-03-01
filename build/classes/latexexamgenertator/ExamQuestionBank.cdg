@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="ExamQuestionBank">
+  <ClassDiagramComponents>
+    <Class name="Exam" package="" visibility="public" xPosition="484.0" yPosition="143.0">
+      <Fields>
+        <Field name="ExamTitle" type="String" visibility="private"/>
+        <Field name="ExamTime" type="String" visibility="private"/>
+        <Field name="Professor" type="String" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="GenerateExam" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Question" package="" visibility="public" xPosition="546.0" yPosition="409.0">
+      <Fields>
+        <Field name="Id" type="Object" visibility="private"/>
+        <Field name="Desc" type="String" visibility="private"/>
+        <Field name="Subject" type="String" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Interface name="IControl" package="" visibility="public" xPosition="825.0" yPosition="120.0">
+      <Methods>
+        <Method name="Add" returnType="void" visibility="public"/>
+        <Method name="Delete" returnType="void" visibility="public"/>
+        <Method name="Update" returnType="void" visibility="public"/>
+      </Methods>
+    </Interface>
+    <Class name="Answer" package="" visibility="public" xPosition="825.0" yPosition="390.0">
+      <Fields>
+        <Field name="id" type="Object" visibility="private"/>
+        <Field name="Desc" type="String" visibility="private"/>
+        <Field name="IsCorrect" type="Boolean" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Professor" package="" visibility="public" xPosition="305.0" yPosition="357.0">
+      <Fields>
+        <Field name="id" type="Object" visibility="private"/>
+        <Field name="FullName" type="String" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="CreateExam" returnType="void" visibility="public">
+          <Argument type="Exam" name="x"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Student" package="" visibility="public" xPosition="196.0" yPosition="143.0">
+      <Fields>
+        <Field name="id" type="Object" visibility="private"/>
+        <Field name="FullName" type="String" visibility="private"/>
+        <Field name="Email" type="String" visibility="private"/>
+        <Field name="Password" type="String" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="User" package="" visibility="public" xPosition="70.0" yPosition="357.0">
+      <Fields>
+        <Field name="id" type="Object" visibility="private"/>
+        <Field name="FullName" type="String" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="Login" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="Students" source="Professor" target="Student" type="Aggregation" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <HasRelation name="answer" source="Exam" target="Answer" type="Aggregation" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="Professor" target="Exam"/>
+    <HasRelation name="exa" source="Exam" target="IControl" type="Aggregation" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="User" target="Student"/>
+    <HasRelation name="Belongs" source="Answer" target="Question" type="Default" sourceCardinality="0..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

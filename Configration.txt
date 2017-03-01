@@ -1,0 +1,11 @@
+IsDatabase=false
+Examiner=Dr Ayman Ezzat, Dr Amr Ghoneim
+ExamTime=3 hours
+ExamTitle=Final Exam
+ExamSubject= Software Engineering 1 CS251 - Spring 2016
+ExamFolderPath=D:\\Exams\\Spring2016\\
+ExamFileName=SWE1
+NoumberOfModels=5
+ImageLogo=images/Helwan.jpg
+FacultyName=Faculty of computers and information
+ExamNotes=Please be sure to write in the answer sheet \\\\(Name is English, \\\\ Seat Number, level and Exam Model)
